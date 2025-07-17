@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head><meta charset="utf-8" /><title>Tesla OAuth Callback</title></head>
+<body>
+  <h1>Authorization Code</h1>
+  <pre id="code">Bekleniyor…</pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('code').textContent = params.get('code') || 'Kod yok';
+  </script>
+</body>
+</html>
